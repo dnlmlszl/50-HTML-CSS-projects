@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Project</title>
+    <title>Progress Bar</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./icons/css/all.min.css">
 </head>
 <body>
-    <h1>my project starter</h1>
-    <h2>heading 2</h2>
-    <h3>heading 3</h3>
+    <div class="container">
+        <div class="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="circle active">1</div>
+            <div class="circle">2</div>
+            <div class="circle">3</div>
+            <div class="circle">4</div>
+            <div class="circle">5</div>
+        </div>
+        <button class="btn" id="prev" disabled>prev</button>
+        <button class="btn" id="next">next</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
