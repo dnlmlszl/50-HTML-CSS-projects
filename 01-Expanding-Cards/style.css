@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;700&family=Roboto:wght@400;700&family=Muli&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    width: 90vw;
+}
+.panel-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(./images/tour-1.jpeg);
+}
+.panel-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(./images/tour-2.jpeg);
+}
+.panel-3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(./images/tour-3.jpeg);
+}
+.panel-4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(./images/tour-4.jpeg);
+}
+.panel-5 {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(./images/tour-5.jpeg);
+}
+.panel-6 {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(./images/tour-6.jpeg);
+}
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s linear;
+}
+.panel h3 {
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    text-transform: capitalize;
+    visibility: hidden;
+}
+
+.panel.active {
+    flex: 5;
+}
+.panel.active h3 {
+    visibility: visible;
+    transition: visibility 0.3s linear 0.4s;
+}
+
+@media screen and (max-width: 660px) {
+    .container {
+        width: 100vw;
+    }
+    .panel:nth-of-type(2), .panel:nth-of-type(4), .panel:nth-of-type(5), .panel:nth-of-type(6) {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95vw;
+    }
+    .panel:nth-of-type(4), .panel:nth-of-type(5), .panel:nth-of-type(6) {
+        display: none;
+    }
+}
+@media screen and (max-width: 990px) {
+    .container {
+        width: 90vw;
+    }
+    .panel:nth-of-type(4), .panel:nth-of-type(5) {
+        display: none;
+    }
+}
