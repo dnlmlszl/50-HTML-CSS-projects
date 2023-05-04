@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --left-bg-color: rgba(87, 84, 236, 0.7);
+    --right-bg-color: rgba(43, 43, 43, 0.8);
+    --left-btn-color: rgb(87, 84, 236);
+    --right-btn-color: rgb(28, 122, 28);
+    --hover-width: 75%;
+    --other-width: 25%;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #333;
+}
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+.split.left {
+    left: 0;
+    background: url('./ps5.jpg') center/cover no-repeat fixed;
+}
+.split.left::before {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: var(--left-bg-color);
+}
+.split.right {
+    right: 0;
+    background: url('./xbox.jpg') center/cover no-repeat fixed;
+}
+.split.right::before {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: var(--right-bg-color);
+}
+h1 {
+    font-size: 4rem;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+.btn {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: #fff;
+    border: #fff solid 0.2rem;
+    font-size: 1rem;
+    width: 15rem;
+    padding: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.split.left .btn:hover {
+    background: var(--left-btn-color);
+}
+.split.right .btn:hover {
+    background: var(--right-btn-color);
+}
+.split.left, .split.right, .split.right::before, .split.left::before {
+    transition: all 1s ease-in-out;
+}
+.hover-left .left {
+    width: var(--hover-width);
+}
+.hover-left .right {
+    width: var(--other-width);
+}
+.hover-right .left {
+    width: var(--other-width);
+}
+.hover-right .right {
+    width: var(--hover-width);
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .btn {
+        width: 12rem;
+        padding: 1.2rem;
+    }
+}
