@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;700&family=Muli&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: steelblue;
+    color: #fff;
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.container {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 1.5rem 3rem;
+    border-radius: 0.25rem;
+}
+.container h1 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    text-transform: capitalize;
+}
+.container a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: lightblue;
+}
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background: lightblue;
+    padding: 1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    border: transparent;
+    border-radius: 0.25rem;
+    margin: 1rem 0;
+    text-transform: uppercase;
+}
+.btn:focus {
+    outline: 0;
+}
+.btn:active {
+    transform: scale(0.98);
+}
+.text {
+    font-size: 1.rem;
+    text-transform: capitalize;
+    color: #fff;
+}
+.form-control {
+    position: relative;
+    margin: 1.5rem 0 3rem;
+    width: 300px;
+}
+.form-control input {
+    background: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 18px;
+    color: #fff;
+}
+.form-control input:focus,
+.form-control input:valid {
+    outline: 0;
+    border-bottom-color: lightblue;
+}  
+
+.form-control label {
+    text-transform: capitalize;
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+.form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265,01.55);
+}
+.form-control input:focus + label span, .form-control input:valid + label span  {
+    color: lightblue;
+    transform: translateY(-30px);
+}
